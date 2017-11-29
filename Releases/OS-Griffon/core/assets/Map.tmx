@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" nextobjectid="114">
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="768" columns="32">
+  <image source="generic_platformer_tiles.png" width="1024" height="768"/>
+ </tileset>
+ <layer name="Background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMA6DxmOsfZD2Ogr2kqqqq6usDlK1wEA==
+  </data>
+ </layer>
+ <layer name="Midground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlMkNwjAQRSepgq2PhKUAKoAE+mCrAOgASgMKYcmBd+CAIqOYiDECzZPe0f4j+Y9FDMMwjHcYxSJjzDCPw+fPyJzjApe4ejHDr8xphOMciVyi7+U36EBTua8Jpth12MM+DhznPtnXDHOHE5zWv9abHa5LbnCL+wD5/0jdXvlwYCePeKrYTa1eXcm9YVGRr9WrFrvWxs5j54ZPaqP5rr7Yf2GE5g4iIzB/
+  </data>
+ </layer>
+ <layer name="Foreground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt0rEJACAQA8Dnh3AUcf/JxFpLRZQ7SB9IIgAAzqp5uwGvKzlnaL71ldXGwD4doKwBSw==
+  </data>
+ </layer>
+ <objectgroup name="platforms">
+  <object id="69" name="line" x="384" y="704">
+   <polyline points="0,0 320,0 320,24 312,32 288,32 288,88 280,96 40,96 32,88 32,32 8,32 0,24 0,0"/>
+  </object>
+  <object id="70" name="line" x="704" y="544">
+   <polyline points="0,0 320,0 320,24 312,32 288,32 288,88 280,96 40,96 32,88 32,32 8,32 0,24 0,0"/>
+  </object>
+  <object id="73" name="line" x="64" y="832">
+   <polyline points="0,0 320,0 320,24 312,32 288,32 288,88 280,96 40,96 32,88 32,32 8,32 0,24 0,0"/>
+  </object>
+  <object id="74" name="bounds" x="0" y="0">
+   <polyline points="0,0 0,1024 1024,1024 1024,0 0,0"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="spikes">
+  <object id="94" x="928" y="544">
+   <polyline points="0,0 -16,-32 -32,0"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="Mushrooms">
+  <object id="91" x="624" y="704">
+   <polyline points="0,0 8,0 8,-16 16,-16 16,-24 8,-32 -8,-32 -16,-24 -16,-16 -8,-16 -8,-8 -8,0 0,0"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="SpawnPoint">
+  <object id="44" name="player" x="128" y="768" width="32" height="32">
+   <properties>
+    <property name="toSpawn" value="Hero"/>
+   </properties>
+  </object>
+  <object id="45" name="badguy" x="480" y="640" width="32" height="32">
+   <properties>
+    <property name="toSpawn" value="Enemy"/>
+   </properties>
+  </object>
+  <object id="113" name="badguy2" x="736" y="480" width="32" height="32">
+   <properties>
+    <property name="toSpawn" value="Enemy"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="DestructibleTiles">
+  <object id="103" x="224" y="800" width="32" height="32"/>
+  <object id="104" x="256" y="800" width="32" height="32"/>
+  <object id="105" x="288" y="800" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="FallingTiles">
+  <object id="106" x="640" y="608" width="32" height="32"/>
+  <object id="108" x="320" y="736" width="32" height="32"/>
+ </objectgroup>
+</map>

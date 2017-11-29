@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" nextobjectid="74">
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="768" columns="32">
+  <image source="generic_platformer_tiles.png" width="1024" height="768"/>
+ </tileset>
+ <layer name="Background" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwwEJAAAMA6DxmOsfZD2Ogr2kqqqq6usDlK1wEA==
+  </data>
+ </layer>
+ <layer name="Midground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlckNwjAUBX/cBGsfrHWQBPpgqwCoACgNUgjbgbkRIUNChG2B/kgj+WI/S362RRRFUZRPGBmRGBNMjf/8KZkznOMCly/28Cv7VPxxikTOUbj8Oh1oOO5rB7vYs9jHAQ4t877Z1wRTi2OcVF/2LdvceIerJ9e4wb2jfF/UzEOfVO1VGQ7cySNmBXfTVa8u5F7xVpDvqldNzrKF7QB/hMtzLUuI9yLPP78Xip07gKcwig==
+  </data>
+ </layer>
+ <layer name="Foreground" width="32" height="32">
+  <data encoding="base64" compression="zlib">
+   eJzt0rEJACAMBEDJEI4i2X8ysbJQwcJK7uAhxXefUgAA3sqYd4tzD27VWDOk//rKbmPgnQ5b6AGF
+  </data>
+ </layer>
+ <objectgroup name="collision">
+  <object id="67" name="rect" x="768" y="512" width="32" height="32"/>
+  <object id="69" name="line" x="384" y="704">
+   <polyline points="0,0 320,0 320,24 312,32 288,32 288,88 280,96 40,96 32,88 32,32 8,32 0,24 0,0"/>
+  </object>
+  <object id="70" name="line" x="704" y="544">
+   <polyline points="0,0 320,0 320,24 312,32 288,32 288,88 280,96 40,96 32,88 32,32 8,32 0,24 0,0"/>
+  </object>
+  <object id="71" name="line" x="640" y="608">
+   <polyline points="0,0 0,24 8,32 24,32 32,24 32,0 0,0"/>
+  </object>
+  <object id="72" name="circle" x="608" y="672" width="32" height="32">
+   <ellipse/>
+  </object>
+  <object id="73" name="line" x="64" y="832">
+   <polyline points="0,0 320,0 320,24 312,32 288,32 288,88 280,96 40,96 32,88 32,32 8,32 0,24 0,0"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="SpawnPoint">
+  <properties>
+   <property name="Type" value=""/>
+  </properties>
+  <object id="44" name="player" x="192" y="768" width="32" height="32">
+   <properties>
+    <property name="toSpawn" value="Hero"/>
+   </properties>
+  </object>
+  <object id="45" name="badguy" x="416" y="640" width="32" height="32">
+   <properties>
+    <property name="toSpawn" value="Enemy"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

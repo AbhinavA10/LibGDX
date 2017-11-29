@@ -1,0 +1,62 @@
+/*http://box2d.org/forum/viewtopic.php?t=9724
+
+public class Entity {
+      public Body body;
+      public Entity(World world) {
+          BodyDef bodyDef...  // set up body def
+          FixtureDef fixtureDef... // set up fixturedef
+          body = world.createBody(bodyDef);
+          body.createFixture(fixtureDef);
+          body.setUserData(this);    // right here we setup our reference for the contact listener
+      }
+}
+
+public class MyContactListener implements ContactListener {
+        private Game game;  // so we can call game's destroy method
+        public MyContactListener(Game game) {
+             this.game = game;
+        }
+
+        @Override
+   public void preSolve(Contact contact, Manifold oldManifold) {
+      // if two entities collide, destroy body A
+      if (contact.getFixtureA().getBody().getUserData() instanceof Entity
+            && contact.getFixtureB().getBody().getUserData() instanceof Entity) {
+         game.destroy(contact.getFixtureA().getBody().getUserData());
+      }
+}
+
+public class Game implements Screen {
+    private World world;
+    Array<Entity> activeEntities;
+    Array<Entity> destroyEntities; 
+    MyContactListener myContactListener = new MyContactListener();
+
+    
+     // initialize, called at start of application
+     @Override
+     public void show() {
+         world.setContactListener(new MyContactListener(this));
+         activeEntities = new Array<Entity>();
+         destroyEntities = new Array<Entity>();
+         ... // make some active entities
+      }
+
+      // update, called every frame 
+      @Overrride
+      public void render() {
+           world.step(...);
+           // for each entity in the destroy list, safely destroy it outside of world.step
+           for (Entity entity : destroyEntities) {
+                world.destroyBody(entity.body);
+           }
+           destroyEntities.clear();
+       }
+
+       public void destroy(Entity entity) {
+           if (!destroyEntities.contains(entity) {
+               destroyEntities.add(entity.body);
+               activeBodies.remove(entity, true); // true for == comparison
+           }
+       }
+}*/
